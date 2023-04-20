@@ -1,0 +1,44 @@
+.max-width-1 {
+    max-width: 80vw;
+}
+
+.max-width-2 {
+    max-width: 60vw;
+}
+
+
+/* vw-view port width */
+
+.m-auto {
+    margin: auto;
+}
+
+.btn {
+    padding: 3px 10px;
+    border: 2px solid black;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 1.2s ease-in-out;
+}
+
+.form-control {
+    padding: 3px 5px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 8px;
+    margin: 0 13px;
+}
+
+:root {
+    --main-bg-color: brown;
+}
+
+.form_box input,
+textarea {
+    width: 60vw;
+    padding: 10px 6px;
+    margin: 8px 0;
+    font-size: 16px;
+    border: 1px solid rgb(52, 211, 52);
+    border-radius: 8px;
+}
