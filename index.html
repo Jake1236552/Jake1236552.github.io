@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>cntrler</title>
+    <link rel="icon" href="1009858138868039730.png" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat+Brush&amp;display=swap"
+      rel="stylesheet"
+    />
+  </head>
+
+  <body onresize="resize()" onload="main()">
+    <canvas id="canvas-background"></canvas>
+    <script src="js/sparkle.js"></script>
+    <script>
+      function videoPlay() {
+        var video = document.getElementById("video");
+        video.volume = 0.05;
+        video.play();
+      }
+
+      function audioPlay() {
+        var audio = document.getElementById("audio");
+        audio.volume = 0.55;
+        audio.play();
+      }
+    </script>
+
+    <video loop preload="auto" class="vidoverlay" id="video">
+      <source src="media/lighting.mp4" type="video/mp4" />
+    </video>
+
+    <audio loop preload="auto" id="audio">
+      <source src="media/song.mp3" type="audio/mpeg" />
+    </audio>
+
+    <input type="checkbox" autocomplete="off" id="overlay-toggle" />
+    <div class="overlay fullscreen">
+      <label for="overlay-toggle" onclick="videoPlay(); audioPlay(); ">
+        <span
+          class="overlayno-hover hover"
+          style="font-family: monospace; font-size: 0.6em"
+          >click to enter</span
+        >
+        <span
+          class="overlayhover hover"
+          style="font-family: monospace; font-size: 0.6em"
+          >click to enter</span
+        >
+      </label>
+    </div>
+
+    <div id="center" align="center">
+      <span>
+        <p class="hover graffiti" style="font-size: 100px">cntrler</p>
+        <p class="hover"></p>
+
+        <p class="hover">
+          <a
+            href="https://discord.com/users/1001226260086784071"
+            target="_blank"
+            class="hover"
+            >discord</a
+          >
+          |
+          <a
+            href="https://www.youtube.com/channel/UCacbqfjrrMH2GC1f-6AHeoA"
+            target="_blank"
+            class="hover"
+            >youtube</a
+          >
+          |
+          <a href="https://twitter.com/jake_7015" target="_blank" class="hover"
+            >twitter</a
+          >
+        </p>
+        <p class="hover"></p>
+        <p></p>
+      </span>
+    </div>
+  </body>
+</html>
